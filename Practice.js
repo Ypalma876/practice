@@ -25,4 +25,14 @@ function largestOfFour(arr) {
     return largests;
 }
   
-  largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+//------------- 2 -------------//
+/* Check if a string (first argument, str) ends with the given target string (second argument, target). */
+
+function confirmEnding(str, target) {
+    return str.slice(-target.length) === target // cuando le paso un valor negativo a slice, corta de atrás hacia adelante
+                                                // Acá comparo que el corte hecho por slice coincida con el target
+  }
+  
+  confirmEnding("Bastian", "n");
