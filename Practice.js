@@ -85,3 +85,21 @@ function findElement(arr, func) {
 }
   
 findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+//------------- Title Case a Sentence -------------//
+/* 
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower 
+case.
+
+For the purpose of this exercise, you should also capitalize connecting words like the and of.
+ */
+
+function titleCase(str) {
+  return str
+    .toLowerCase() // convierto toda la oración a minúsculas para que solo me que quede convertir la primera letra a mayúsculas
+    .split(" ") // separo cada palabra
+    .map(word => word.replace(word[0], word[0].toUpperCase())) // con el map reemplazo la primera letra a mayúsucula
+    .join(' ') // uno cada paralabra para hacer una oración colocándole un espacio entre cada una
+}
+
+titleCase("I'm a little tea pot");
